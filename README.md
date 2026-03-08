@@ -27,35 +27,17 @@ beginner-friendly cooking instructions.
 - Framework: LangGraph + Pydantic
 
 ## Example outputs
-See the /example_outputs folder for JSON results from 10 test recipes.
+See at the end of my file.
 
 ## Evaluation
-Tested on 10 varied recipes including meat, vegan, fish, baking,
+Tested on 3 varied recipes including meat, vegan, fish, baking,
 and recipes with imperial units.
 
 ## What worked
-- Critique/repair loop improved step clarity reliably
+- Critique/repair loop improved step clarity
 - Variant detection (vegan/meat/fish) was consistently accurate
-- fix_units() function reliably handled unit conversion in code
+- Generic recipe name is cleaned well so instead of Best keto brownie recipe it rewrites to Keto brownie  
 
 ## What failed
 - Unit enforcement via prompt alone was unreliable
 - Model occasionally returned invalid difficulty values
-
-## What I would improve
-- Add serving size scaling
-- Add confidence scoring per step
-- Connect to SousChef API endpoint directly
-```
-
----
-
-**Step 9 — Final check**
-Your repo should look like:
-```
-souschef-recipe-agent/
-├── README.md
-├── souschef_recipe_agent.ipynb
-└── example_outputs/
-    ├── chicken_rice.json
-    ├── pancake.json
